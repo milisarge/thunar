@@ -377,4 +377,14 @@ convert -quality 100 -density 600x600 multipage.pdf single%d.jpg)</description>
 	<text-files/>
 	<video-files/>
 </action>
+<action>
+	<icon>/usr/share/icons/Tango/16x16/actions/document-save-as.png</icon>
+	<name>VirtualBox to KWM</name>
+	<unique-id>1431880714896796-5</unique-id>
+	<command>qemu-img convert -f vmdk -O qcow2 %f %f.qcow2</command>
+	<description>For use with http://dev.modern.ie/tools/vms/ vmdk to qcow2, first open ova file in VirtualBox once</description>
+	<patterns>*.vmdk</patterns>
+	<other-files/>
+	<text-files/>
+</action>
 </actions>
