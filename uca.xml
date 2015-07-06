@@ -115,6 +115,19 @@ convert -quality 100 -density 600x600 multipage.pdf single%d.jpg)</description>
 	<video-files/>
 </action>
 <action>
+	<icon>/usr/share/icons/Tango/16x16/actions/format-indent-more.png</icon>
+	<name>Resize PDF to SCREEN quality</name>
+	<unique-id>1436186608040852-1</unique-id>
+	<command>gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/screen -dNOPAUSE -dQUIET -dBATCH -sOutputFile=%fresized.pdf %f</command>
+	<description></description>
+	<patterns>*.pdf;*.PDF</patterns>
+	<audio-files/>
+	<image-files/>
+	<other-files/>
+	<text-files/>
+	<video-files/>
+</action>
+<action>
 	<icon>/usr/share/icons/Tango/16x16/actions/go-down.png</icon>
 	<name>Download torrent</name>
 	<unique-id>1369723703661927-13</unique-id>
