@@ -34,7 +34,7 @@ input2=$(echo $input2 | sed 's/"//g')
 
 title=$(echo "Find $input and replace with $input2 in $1" | sed 's/ /./g')
 
-affected=$(grep -lr -e "$input" "$1/")
+affected=$(grep --exclude-dir=.git --exclude-dir=.svn -lr -e "$input" "$1/")
 
 if [[ -z "$affected" ]]; then
    whiptail --topleft --title "No matches" --msgbox "Sorry your search phrase was not found." 8 78
@@ -46,7 +46,7 @@ $affected" 20 124 3>&1 1>&2 2>&3)
 
 if [ "$sure" = "YES" ]
 then
-   grep -lZr -e "$input" "$1/" | xargs -0 sed -i "s^$input^$input2^g"
+   grep --exclude-dir=.git --exclude-dir=.svn -lZr -e "$input" "$1/" | xargs -0 sed -i "s^$input^$input2^g"
 else
    exit 0 &
    sleep 3
