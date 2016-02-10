@@ -1,6 +1,20 @@
 <?xml encoding="UTF-8" version="1.0"?>
 <actions>
 <action>
+	<icon>Thunar</icon>
+	<name>Rename</name>
+	<unique-id>1455096337334736-4</unique-id>
+	<command>xfce4-terminal -x ~/Scripts/thunar/rename.sh %f</command>
+	<description>Rename file or folder</description>
+	<patterns>*</patterns>
+	<directories/>
+	<audio-files/>
+	<image-files/>
+	<other-files/>
+	<text-files/>
+	<video-files/>
+</action>
+<action>
 	<icon>/usr/share/icons/Tango/16x16/devices/media-optical.png</icon>
 	<name>Mount iso/nrg</name>
 	<unique-id>1376297231254718-1</unique-id>
